@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  -	Note
+  - Note
   - Right
   - Left
+
   layers:
   - Default
   - TransparentFX
