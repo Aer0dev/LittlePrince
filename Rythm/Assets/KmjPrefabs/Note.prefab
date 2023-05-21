@@ -88,10 +88,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5501463798653310174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32e3f66dc616d90478a6af6dae0fa713, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a0d616d867902f44ba68c9092711623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteSpeed: 300
+  bpm: 0
+  tfNoteAppear: {fileID: 0}
+  goNote: {fileID: 0}
 --- !u!61 &5149228634087231706
 BoxCollider2D:
   m_ObjectHideFlags: 0

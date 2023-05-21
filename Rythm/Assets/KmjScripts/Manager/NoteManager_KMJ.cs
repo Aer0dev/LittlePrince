@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NoteManager : MonoBehaviour
+public class NoteManager_KMJ : MonoBehaviour
 {
     public int bpm = 0;
     double currentTime = 0d;
