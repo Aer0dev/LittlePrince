@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spaceship_Music : MonoBehaviour
 {
-    public AudioSource audioSoruce;
+    public AudioSource audioSource;
 
     private double startTime;
 
@@ -13,9 +13,9 @@ public class Spaceship_Music : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSoruce = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         startTime = AudioSettings.dspTime;
-        audioSoruce.PlayScheduled(startTime + delayInSeconds);
+        audioSource.PlayScheduled(startTime + delayInSeconds);
     }
 
     // Update is called once per frame
