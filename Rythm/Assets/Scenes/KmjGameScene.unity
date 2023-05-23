@@ -447,10 +447,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 616220887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0991b1d9ecb83f4c905fe1b816a9918, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d5020541ab399444b60456c3bb51776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  maxHealth: 100
+  count: 0
 --- !u!4 &616220889
 Transform:
   m_ObjectHideFlags: 0
@@ -656,7 +658,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 450, y: 50}
+  m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &755511943
 MonoBehaviour:
@@ -718,7 +720,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 755511941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c9825bd3326d3c45ab5bc5d3e2e14b2, type: 3}
+  m_Script: {fileID: 11500000, guid: ec7697444ee6d5147bf836d441ad18c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &861606430
@@ -893,8 +895,8 @@ GameObject:
   - component: {fileID: 940910533}
   - component: {fileID: 940910532}
   - component: {fileID: 940910536}
-  - component: {fileID: 940910535}
   - component: {fileID: 940910534}
+  - component: {fileID: 940910535}
   m_Layer: 5
   m_Name: Center
   m_TagString: Untagged
@@ -995,7 +997,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 940910530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 811633fa8c711664e9e0e3d4e6853c3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b5e2b53565b1ed4f84007c1247fed07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &940910536
@@ -1008,7 +1010,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 481aa286c926eab4fae2e5a465bfec45, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a653261d88ed8d943923fbf2d52156a5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1135,7 +1137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1327881947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8c857fc9574f943b3da5e06a9cb601, type: 3}
+  m_Script: {fileID: 11500000, guid: 933e23e528902bd4db5879fbe461f5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1381214549
@@ -1242,7 +1244,7 @@ RectTransform:
   m_GameObject: {fileID: 1392756164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.95, y: 3.253294, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 207680930}
@@ -1252,7 +1254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -146}
+  m_AnchoredPosition: {x: 0, y: -390}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392756166
@@ -1264,12 +1266,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1392756164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dab22f9e6253984aa31375d29facab2, type: 3}
+  m_Script: {fileID: 11500000, guid: 04cd985ae7e1a804aa30def198d6094a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bpm: 140
   tfNoteAppear: {fileID: 1922785496}
-  goNote: {fileID: 5501463798653310174, guid: 268834e5248fe2d4eb06e38a5288719d, type: 3}
+  goNote: {fileID: 5501463798653310174, guid: 6c2f3e1fccb7f8b408b2b6d7cee04f3b, type: 3}
 --- !u!61 &1392756167
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1283,7 +1285,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 600, y: 0}
+  m_Offset: {x: 510, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1305,7 +1307,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1392756164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7995c18a94547f4da4578422019a305, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d06248d26b1754d87db477b0018537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boxNoteList: []

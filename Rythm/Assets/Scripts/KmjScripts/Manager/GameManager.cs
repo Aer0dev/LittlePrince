@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public float hp;
     public float maxHealth = 100;
+    public int count=0;
 
     private void Awake()
     {
@@ -25,5 +26,10 @@ public class GameManager : MonoBehaviour
         {
             hp = 0;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        count += 1;
     }
 }

@@ -6,7 +6,7 @@ public class Note : MonoBehaviour
 {
     public float noteSpeed = 300;
     public bool isHit = false;
-
+    
     UnityEngine.UI.Image noteImage;
 
     private void Start()

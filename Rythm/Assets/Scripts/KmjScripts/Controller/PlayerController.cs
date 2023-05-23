@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             theTimingManager.CheckTiming();
+            Debug.Log(GameManager.instance.count-140);
         }
     }
 }
