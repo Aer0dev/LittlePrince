@@ -866,11 +866,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 210195d7-0144-4367-aeaa-95905d1be72c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: planet
+  organizationId: sub1001
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
