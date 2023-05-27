@@ -5,6 +5,9 @@ using UnityEngine;
 public class TimingManager : MonoBehaviour
 {
     public List<GameObject> boxNoteList = new List<GameObject>();
+    public GameObject effectPrefab;
+    public Transform effectTrans;
+    public ParticleSystem effect;
 
     [SerializeField] Transform Center = null;
     [SerializeField] RectTransform[] timingRect = null;
@@ -30,8 +33,9 @@ public class TimingManager : MonoBehaviour
             {
                 if (timingBoxs[x].x <= t_notePosX && t_notePosX <= timingBoxs[x].y)
                 {
-                    boxNoteList[i].GetComponent<Note>().HideNote();
+                    //boxNoteList[i].GetComponent<Note>().HideNote();
                     boxNoteList[i].GetComponent<Note>().isHit = true;
+                    boxNoteList[i].GetComponent<Note>().anim.SetTrigger("NailGood");
                     boxNoteList.RemoveAt(i);
                     switch (x)
                     {

@@ -7,7 +7,6 @@ TagManager:
   - Note
   - Right
   - Left
-
   layers:
   - Default
   - TransparentFX

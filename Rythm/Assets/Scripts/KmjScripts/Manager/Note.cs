@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    public float noteSpeed = 300;
+    public float noteSpeed;
     public bool isHit = false;
+
+    public Animator anim;
     
     UnityEngine.UI.Image noteImage;
 
     private void Start()
     {
         noteImage = GetComponent<UnityEngine.UI.Image>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()

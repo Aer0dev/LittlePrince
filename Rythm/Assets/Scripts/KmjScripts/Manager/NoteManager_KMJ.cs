@@ -5,7 +5,7 @@ using UnityEngine;
 public class NoteManager_KMJ : MonoBehaviour
 {
     public int bpm = 0;
-    double currentTime = 0d;
+    //double currentTime = 0d;
 
     [SerializeField] Transform tfNoteAppear = null;
     [SerializeField] GameObject goNote = null;
@@ -19,14 +19,28 @@ public class NoteManager_KMJ : MonoBehaviour
 
     void Update()
     {
-        currentTime += Time.deltaTime;
+        //currentTime += Time.deltaTime;
 
-        if(noteMaker(GameManager.instance.count))//currentTime>=60d/bpm)
+        
+        /*if(noteMaker(GameManager.instance.count))//currentTime>=60d/bpm)
         {
+            //Debug.Log(GameManager.instance.count);
             GameObject t_note = Instantiate(goNote, tfNoteAppear.position, Quaternion.identity);
             t_note.transform.SetParent(this.transform);
             theTimingManager.boxNoteList.Add(t_note);
             currentTime -= 60d / bpm;
+        }*/
+    }
+
+    private void FixedUpdate()
+    {
+        if(noteMaker(GameManager.instance.count))//currentTime>=60d/bpm)
+        {
+            //Debug.Log(GameManager.instance.count);
+            GameObject t_note = Instantiate(goNote, tfNoteAppear.position, Quaternion.identity);
+            t_note.transform.SetParent(this.transform);
+            theTimingManager.boxNoteList.Add(t_note);
+            //currentTime -= 60d / bpm;
         }
     }
 
@@ -61,7 +75,7 @@ public class NoteManager_KMJ : MonoBehaviour
             (x ==3101) || (x ==3145) || (x ==3207) || (x ==3226) || 
             (x ==3273) || (x ==3318) || (x ==3493) || (x ==3575) || 
             (x ==3661) || (x ==3742) || (x ==3829) || (x ==3917) ||
-             (x ==5147) || (x ==4346)|| (x ==4390) || (x ==4401) ||
+            (x ==4346)|| (x ==4390) || (x ==4401) ||
             (x ==4424) || (x ==4443) || (x ==4461) || (x ==4517) || 
             (x ==4561) || (x ==4572) || (x ==4604) || (x ==4625) || 
             (x ==4688) || (x ==4728) || (x ==4740) || (x ==4764) ||
