@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CustomCursor_Sh : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public Vector3 screenPosition;
+    public Vector3 worldPosition;
+
     public SpriteRenderer cursor;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +19,17 @@ public class CustomCursor_Sh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = cursorPos;
+        screenPosition = Input.mousePosition;
+        screenPosition.z = Camera.main.nearClipPlane +9.7f;
+        worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+      
+        transform.position = worldPosition;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Note")
+        {
+            audioSource.Play();
+        }
     }
 }
