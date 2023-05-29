@@ -4,18 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Note
-  - Right
-  - Left
   - Note_sh
   - Cursor
   - HUD
   - CheckMiss
+  
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
   - Water
   - UI
   - 

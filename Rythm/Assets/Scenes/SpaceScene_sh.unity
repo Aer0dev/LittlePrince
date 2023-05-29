@@ -513,7 +513,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fc58ad02323be4097d525250273682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3754175989034690553, guid: f5675b37ea459f34093d139ee16d09c1, type: 3}
+  prefab:
+  - {fileID: 3754175989034690553, guid: f5675b37ea459f34093d139ee16d09c1, type: 3}
+  - {fileID: 3754175989034690553, guid: 6e347b52d6dbe094f91439050f46fcf6, type: 3}
+  - {fileID: 3754175989034690553, guid: b00769e8eac11a2418433d5ffab0121b, type: 3}
+  - {fileID: 3754175989034690553, guid: 46037298b7af2b04a8f3084e470a849d, type: 3}
   offsetX: 3.5
   offsetY: 3.5
   filePath: Assets/Sheet/Shelter_Note.txt
@@ -1174,7 +1178,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3a1ede5fdfa3c204b9d30de5a2b6ca4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8c77548af28b6441907325c5314d114, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1193,8 +1197,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039025347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
-  m_LocalScale: {x: 13, y: 13, z: 1}
+  m_LocalPosition: {x: 0, y: -35, z: 100}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

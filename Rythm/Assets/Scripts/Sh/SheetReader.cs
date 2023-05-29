@@ -1,17 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SheetReader : MonoBehaviour
 {
-    public GameObject prefab; // 생성할 프리팹
+    public GameObject[] prefab; // 생성할 프리팹
     public float offsetX = 3.5f; // X 축 위치 오프셋
     public float offsetY = 3.5f; // Y 축 위치 오프셋
     public string filePath = "Assets/Sheet/Shelter_Note.txt"; // 텍스트 파일의 경로
     
-
-
     private void Start()
     {
         // 텍스트 파일에서 2차원 배열과 시간 데이터 읽기
@@ -79,10 +79,11 @@ public class SheetReader : MonoBehaviour
 
             float xPos = GetXPosition(column);
             float yPos = GetYPosition(row);
-
-            Instantiate(prefab, new Vector3(xPos, yPos, 30), Quaternion.identity);
+            int index = Random.Range(0, prefab.Length);
+            Instantiate(prefab[index], new Vector3(xPos, yPos, 30), Quaternion.identity);
         }
     }
+
 
     float GetXPosition(int col)
     {
