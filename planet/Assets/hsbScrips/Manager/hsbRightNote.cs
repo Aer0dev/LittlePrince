@@ -17,15 +17,7 @@ public class hsbRightNote : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Hit"))
-        {
-            Right.SetActive(false);
-            Destroy(Right);
-            UnityEngine.Debug.Log("실패");
-        }
-    }
+    
 
     private void Start()
     {
@@ -35,16 +27,33 @@ public class hsbRightNote : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            stopwatch.Stop();
-            Destroy(Right);  
-            UnityEngine.Debug.Log(stopwatch.ElapsedMilliseconds + " ms");
-        }
 
         transform.Translate(Vector3.down * noteSpeed * Time.smoothDeltaTime);
 
 
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Hit") && Input.GetKey(KeyCode.D))
+        {
+
+            stopwatch.Stop();
+            Destroy(Right);
+            UnityEngine.Debug.Log(stopwatch.ElapsedMilliseconds + " ms");
+
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Hit"))
+        {
+
+            Right.SetActive(false);
+            Destroy(Right);
+            UnityEngine.Debug.Log("실패");
+        }
     }
 
 }

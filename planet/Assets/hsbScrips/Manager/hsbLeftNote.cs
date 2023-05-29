@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class hsbLeftNote : MonoBehaviour
 {
-    hsbReader delete;
     Stopwatch stopwatch;
     public GameObject Left;
     public float noteSpeed = 1f;
@@ -17,17 +16,6 @@ public class hsbLeftNote : MonoBehaviour
         RB = GetComponent<Rigidbody>();
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Hit"))
-        {
-            Left.SetActive(false);
-            Destroy(Left);
-            UnityEngine.Debug.Log("실패");
-        }
-    }
-
     private void Start()
     {
         stopwatch = new Stopwatch();
@@ -36,16 +24,31 @@ public class hsbLeftNote : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+
+        transform.Translate(Vector3.up * noteSpeed * Time.smoothDeltaTime);
+
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Hit") && Input.GetKey(KeyCode.A))
         {
             stopwatch.Stop();
             Destroy(Left);
             UnityEngine.Debug.Log(stopwatch.ElapsedMilliseconds + " ms");
         }
 
-        transform.Translate(Vector3.up * noteSpeed * Time.smoothDeltaTime);
+    }
 
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Hit"))
+        {
+            Left.SetActive(false);
+            Destroy(Left);
+            UnityEngine.Debug.Log("실패");
+        }
     }
 
 }

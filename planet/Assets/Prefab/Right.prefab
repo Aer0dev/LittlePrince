@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8521203023925848146}
   - component: {fileID: 6141040312966009976}
   - component: {fileID: -4474483680594516339}
-  - component: {fileID: 5636685531809368397}
+  - component: {fileID: -2539092368698726229}
   m_Layer: 0
   m_Name: Right
   m_TagString: Right
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5366108955054169535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45592824, y: -1.7593738, z: 0}
+  m_LocalPosition: {x: 0.45592824, y: -7.781305, z: 0}
   m_LocalScale: {x: 0.51386, y: 0.51386, z: 0.51386}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5636685531809368397
+--- !u!114 &-2539092368698726229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,4 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Right: {fileID: 5366108955054169535}
-  noteSpeed: 3
+  noteSpeed: 4
