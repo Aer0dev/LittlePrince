@@ -17,7 +17,7 @@ public class Note_Sh : MonoBehaviour
         RB = GetComponent<Rigidbody>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Cursor")
         {
