@@ -105,11 +105,11 @@ public class hsbReader : MonoBehaviour
     float GetYPosition(int col)
     {
         if (col == 0)
-            return -1.5f;
+            return -3.5f;
         else if (col == 1)
             return 0f;
         else
-            return 2f;
+            return 0.2f;
     }
 }
 
