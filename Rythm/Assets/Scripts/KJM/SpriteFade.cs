@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class SpriteFade : MonoBehaviour
 {
-    protected GameObject FadeType;
+    public GameObject FadeType;
     public Image image;
     public static bool FadeOff = false;
 
 
-    protected void Init()
+    protected void Init()       //fad out&&in 이 씬이 있는지 확인, 있으면 fadetype 에 저장
     {
         if (GameObject.Find("Canvas/FadeOut") != null)
             FadeType = GameObject.Find("Canvas/FadeOut");
@@ -27,7 +27,7 @@ public class SpriteFade : MonoBehaviour
     }
 
 
-    protected void Faded()
+    protected void Faded()      //fade out이면 fadeout으로 in이면 in으로 함수를 호출
     {
         if (GameObject.Find("Canvas/FadeOut") != null)
             StartCoroutine(FadeOutCoroutine());
@@ -35,7 +35,6 @@ public class SpriteFade : MonoBehaviour
             StartCoroutine(FadeInCoroutine());
         else
         {
-            Debug.Log("Check Faded");
             return;
         }
     }

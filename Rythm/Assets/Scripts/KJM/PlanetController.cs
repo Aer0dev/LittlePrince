@@ -11,12 +11,13 @@ public class PlanetController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        Button_OnClick.PlanetFadeOut = false;
         
     }
 
      void Update()
     {
-        if (Button_OnClick.PlanetFadeOut == true)
+        if (Button_OnClick.PlanetFadeOut == true)   //title俊辑 家青己 牧飘费
         {
         Switch = Mathf.Lerp(Switch, 1, 10.0f * Time.deltaTime);
         anim.SetFloat("Switch", Switch);

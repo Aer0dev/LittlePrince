@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Fixed : MonoBehaviour
+public class Fixed : MonoBehaviour  //사용x스크립
 {
     private void Start()
     {

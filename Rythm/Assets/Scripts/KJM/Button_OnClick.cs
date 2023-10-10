@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Button_OnClick : SpriteFade
 {
-    public string sceneName = "Map";
+    static string sceneName = "KJM_Map";
 
     static private SoundFade soundFade;
     static bool BGMOn=false;
@@ -18,7 +18,7 @@ public class Button_OnClick : SpriteFade
 
 
         soundFade = FindObjectOfType<SoundFade>();
-        if (soundFade != null&&BGMOn==false)
+        if (soundFade != null&&BGMOn==false)        //audio play
         {
             BGMOn=true;
             AudioSource audioSource = soundFade.audioSource;
@@ -31,7 +31,7 @@ public class Button_OnClick : SpriteFade
     {
 
 
-        if (FadeOff)
+        if (FadeOff)        //if fade out change scene
         {
             Debug.Log("out");
             SceneManager.LoadScene(sceneName);
@@ -40,7 +40,7 @@ public class Button_OnClick : SpriteFade
     }
 
 
-    public void ClickStart()
+    public void ClickStart()        //button click
     {
 
         if (SceneManager.GetSceneByName(sceneName) == null)
@@ -55,12 +55,12 @@ public class Button_OnClick : SpriteFade
         Faded();
     }
 
-    public void ClickLoad()
+    public void ClickLoad()     //로드 구현하지 않았음.
     {
         Debug.Log("로드");
     }
 
-    public void ClickExit()
+    public void ClickExit() //게임 종료
     {
         Debug.Log("게임 종료");
         Application.Quit();

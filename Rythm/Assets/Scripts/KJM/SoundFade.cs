@@ -16,7 +16,7 @@ public class SoundFade : MonoBehaviour
 
 
 
-    public IEnumerator SoundFadeOut()
+    public IEnumerator SoundFadeOut()       //소리 천천히 사라지기
     {
 
         while (audioSource.volume>=0f)
